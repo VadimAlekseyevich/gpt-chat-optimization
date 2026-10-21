@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GPT Chat Optimization",
+  "version": "0.1.0",
+  "description": "Opt-in, CSS-only rendering optimization for long ChatGPT conversations. No message access or network requests.",
+  "minimum_chrome_version": "105",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "GPT Chat Optimization",
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
