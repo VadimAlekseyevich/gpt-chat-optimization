@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPT Chat Optimization</title>
+  <link rel="stylesheet" href="popup.css" />
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>⚡ GPT Chat Optimization</h1>
+    <p class="lead">Локальная оптимизация длинных переписок без удаления сообщений.</p>
+    <label class="toggle-row" for="enabled">
+      <span>Разрешить оптимизацию</span>
+      <input type="checkbox" id="enabled" aria-describedby="privacy" />
+    </label>
+    <p id="status" role="status" aria-live="polite">Проверяем состояние…</p>
+    <p id="privacy" class="small">По умолчанию выключено. Запускается только в чатах с 40+ сообщениями. Не считывает текст и не отправляет данные.</p>
+    <button id="refresh" type="button">Обновить состояние</button>
+  </main>
+</body>
+</html>
